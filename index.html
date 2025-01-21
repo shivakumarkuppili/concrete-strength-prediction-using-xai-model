@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concrete strength prediction</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;
+subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:400,400i" rel="stylesheet"> </head>
+
+<body>
+    <section id="top-menu">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+               
+                   
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">
+                        <img src="image/industrial-3750300_1280.png" alt=""></a> </div>
+                    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     <form class="navbar-form navbar-left">
+       
+                      </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="http://localhost:8501" target="_blank">Prediction</a></li>                        
+                        <li><a href="our_team.html">Our Team</a></li>
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us <span class="caret"></span></a>
+                            <ul class="dropdown-menu  animated bounceInLeft">
+                                <li><a href="AboutCoachingC.html">About Our Coaching</a></li>
+                                <li><a href="our_values.html">Our Values</a></li>
+                            </ul>
+                        </li>
+                          
+                       
+                        <li><a href="contact_us.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </section>
+    <section id="slider">
+        <div id="first-slider">
+            <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!-- Item 1 -->
+                    <div class="item active slide1" >
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-md-9 text-left" >
+                                    <h3 data-animation="animated bounceInLeft" style="font-weight: bold; color:rgb(255, 248, 248); ">A strong team can take any crazy vision and turn it into reality</h3>
+                                    <h4 data-animation="animated bounceInUp" style="font-weight: bold; color:rgb(255, 255, 255);">build strong architecture</h4> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="item slide2">
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown"style="font-weight: bold; color:white;"> build your future</h3>
+                                    <h4 data-animation="animated bounceInUp"style="font-weight: bold; color:white;">Architecture should speak of its time and place, but yearn for timelessness</h4> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="item slide3">
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown"style="font-weight:400px; color:black;">Collaboration in construction not only erects buildings</h3>
+                                    <h4 data-animation="animated bounceInUp"style="font-weight: bold; color:black;"> it also constructs futures..</h4> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="item slide4">
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-md-7 text-left">
+                                    <h3 data-animation="animated bounceInDown" style="font-weight: bold; color:black;">We are creative</h3>
+                                    <h4 data-animation="animated bounceInUp" style="font-weight: bold; color:black;">Get start your next awesome project</h4> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Item 4 -->
+                </div>
+                <!-- End Wrapper for slides-->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span> </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <i class="fa fa-angle-right"></i><span class="sr-only">Next</span> </a>
+            </div>
+        </div>
+    </section>
+    <!--    about us section -->
+    <section id="about_us">
+        <h2>About Us</h2>
+        <div class="container">
+            <div class="A-banner-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="A1-left">
+                            <h1>concrete mix</h1>
+                            <h3></h3>
+                            <p>Cement: The binding agent in concrete, which hardens when mixed with water.</p>
+                        </div>
+                        <div class="A2-left">
+                            <h1>Who is it for?</h1>
+                            <p>*Students of civil engineers</p>
+                            <p>*Students of interns</p>
+                            <p>*For gaining knowledge</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="margin-left: 300px;">
+                        <div class="A1-middle">
+                            <h1>How to mix</h1>
+                            <p>*Fill values of concrete mixtures</p>
+                            <p>*You sholud fill mixture ratios and get the results for more read shap values</p>
+                            <p>*Your test results, analysis and solutions will be analysed and suggestion from chat bot</p>
+                        </div>
+                           
+                            <div class="A3-button">
+                                <a href="#">
+                                    <button class="R-button" type="button">know more!</button>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    course offered -->
+    <section id="course-part">
+        <h2>Concrete ingredients </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel slide multi-item-carousel" id="theCarousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-xs-4 col-md-4">
+                                    <a href="#1"><img src="image/pic8.jpg" class="img-responsive"></a>
+                                    <p>Cement</p>
+                                    
+                                    <div class="C02-button">
+                                        <a href="#">
+                                            <button type="button" class="Course-reg07"> see more</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4 col-md-4">
+                                    <a href="#1"><img src="image/pic9.jpg" class="img-responsive"></a>
+                                    <p>fly ash</p>
+                        
+                                    <div class="C02-button">
+                                        <a href="#">
+                                            <button type="button" class="Course-reg07"> see more</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4 col-md-4">
+                                    <a href="#1"><img src="image/pic3.jpg" class="img-responsive"></a>
+                                    <p>slag</p>
+                                    
+                                    <div class="C02-button">
+                                        <a href="#">
+                                            <button type="button" class="Course-reg07"> see more</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-4  col-md-4">
+                                    <a href="#1"><img src="image/propic.png" class="img-responsive"></a>
+                                    <p>water</p>
+                                    
+                                    <div class="C02-button">
+                                        <a href="#">
+                                            <button type="button" class="Course-reg07"> see more</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- add  more items here -->
+                            <!-- Example item start:  -->
+                            <!--  Example item end -->
+                        </div> <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a> <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--    your video part-->
+    
+    <section id="video-part">
+        <h2>Concept Videos</h2>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8">
+            <div class="video-009p">
+                <figure>
+                    <iframe width="760" height="515" src="https://www.youtube.com/embed/YeymAmw05XI?si=2xg9ArqasGAXwt5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </figure>
+            
+            </div>
+            
+            </div>
+            
+            <div class="col-md-4">
+            <div class="video-info08">
+                <div class="combo007">
+                <div class="thumnil001">
+                    <a href="#">   <img src="image/7.png" alt="image"></a>
+                
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/SR_Eq9Z7tbM?si=zHScUXnl-kb3XHpk" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                <br>
+                 <div class="combo007">
+                <div class="thumnil001">
+                 <a href="#"><img src="image/7.png" alt="image"></a>
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/qyjLWOwpTqc?si=l7q9RyfnfPPeti2K" target="_blank">Make a Mobile Icon and Add super cool animations! [Skill Development]</a>
+                
+                </div>
+                </div>
+                <br>
+                  <div class="combo007">
+                <div class="thumnil001">
+                  <a href="#"><img src="image/7.png" alt="image"></a>
+                
+                
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">Easy Method of Creating Animation Scene in PowerPoint 2016 | The Teacher</a>
+                
+                </div>
+                </div>
+                <br>
+                  <div class="combo007">
+                <div class="thumnil001">
+                 <a href="#">   <img src="image/7.png" alt="image"></a>
+                
+                
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                <br>
+                 <div class="combo007">
+                <div class="thumnil001">
+                 <a href="#">   <img src="image/7.png" alt="image"></a>
+                
+                
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                <br>
+                 <div class="combo007">
+                <div class="thumnil001">
+                <a href="#">   <img src="image/7.png" alt="image"></a>
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                <br>
+                  <div class="combo007">
+                <div class="thumnil001">
+                <a href="#">   <img src="image/7.png" alt="image"></a>
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                  <div class="combo007">
+                <div class="thumnil001">
+                <a href="#">   <img src="image/7.png" alt="image"></a>
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+                  <div class="combo007">
+                <div class="thumnil001">
+                <a href="#">   <img src="image/7.png" alt="image"></a>
+                </div>
+                <div class="thum002-details">
+                <a href="https://youtu.be/6dQXtSfN54k" target="_blank">How To Animate an INTRO! [Skill Development]</a>
+                
+                </div>
+                </div>
+          
+                </div>
+            
+            
+            </div>
+        
+        </div>
+        
+        
+        </div>
+    
+    
+    </section>
+    
+<!--    Admission ads-->
+    
+    
+    <section id="admission-ads">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="admission0006">
+             <h3>Know More About Concrete Prediction<br>Ask any queries,mail to sjvk@gmail.com</h3>
+            
+            </div>
+    
+            
+            </div>
+            <div class="col-md-6">
+                      <div class="askqes003">
+   <a href="#"><button type="button" class="ques008-button">ASK QUES</button></a>
+            
+            </div>
+            </div>
+        
+        
+        </div>
+        
+        
+        </div>
+    
+    
+    </section>
+    
+<!--    latest news part-->
+    
+    
+    <section id="latest004">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="coursr-01">
+                        <h4>MIT</h4>
+                        <div class="course_02img"> <img src="image/pic12.jpg" alt="">
+                            <h4>Why do we use it?</h4>
+                            <p>Recent discoveries by MIT have revealed that introducing new materials into existing concrete manufacturing processes reduce this carbon footprint</p>
+                        </div>
+                        <div class="C03-button">
+                            <a href="#">
+                                <button type="button" class="see-more007"> See more</button>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="coursr-01">
+                        <h4>Government</h4>
+                        <div class="course_02img"> <img src="image/pic13.jpg" alt="">
+                            <h4>Pollution</h4>
+                            <p>After water, concrete is the world’s second most consumed material, and represents the cornerstone of modern infrastructure bans in USA</p>
+                        </div>
+                        <div class="C03-button">
+                            <a href="#">
+                                <button type="button" class="see-more007"> See more</button>
+                            </a>
+                        </div>
+                      
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="coursr-01">
+                        <h4>Science</h4>
+                        <div class="course_02img"> <img src="image/globe.jpg" alt="">
+                            <h4>Where can I get some?</h4>
+                            <p>As the mineral mix is heated to temperatures above 1,400 degrees Celsius (2,552 degrees Fahrenheit), it undergoes a chemical transformation </p>
+                        </div>
+                        <div class="C03-button">
+                            <a href="#">
+                                <button type="button" class="see-more007"> See more</button>
+                            </a>
+                        </div>
+                     
+                    </div>
+                </div>
+                  <div class="col-md-3">
+                    <div class="coursr-01">
+                        <h4>Ai Model</h4>
+                        <div class="course_02img"> <img src="image/lap.jpg" alt="">
+                            <h4>Ai driven models</h4>
+                            <p>The patented AI platform develops optimized concrete mix designs and predicts performance within seconds, empowering concrete producers to rapidly</p>
+                        </div>
+                        <div class="C03-button">
+                            <a href="#">
+                                <button type="button" class="see-more007"> See more</button>
+                            </a>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+<!--    faculty protfolio-->
+    
+    <section id="portfolio" class="text-center">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div id="filters" class="button-group">
+                <button class="button is-checked" data-filter="*"><i class="fa fa-cubes" aria-hidden="true"></i></button>
+                <button class="button" data-filter=".metal">Ai model developer</button>
+                <button class="button" data-filter=".transition">full stack developer </button>
+                <button class="button" data-filter=".metal, .alkaline-earth">tester</button>
+                <button class="button" data-filter=":not(.transition)">security</button>
+            </div>
+            <div class="grid">
+                <div class="element-item transition metal " data-category="transition"> <img src="image/avatar-3814081_1280.png">
+                    <h4>shiva</h4>
+                    <div class="isotope-overlay">
+                        <a href="#"><h4>Shiva</h4></a> 
+                        <h5>student at gmrit</h5>
+                        <p>Mr.shiva kumar software developer. He has been responsible for helping build the ai models </p>
+                        <div class="details005">
+                       <a href="#"> <button class="teacher002details" type="button">See More</button></a>
+                        
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+                <div class="element-item metalloid " data-category="metalloid"> <img src="image/avatar-3814081_1280.png">
+                    <h4>jayanth</h4>
+                    <div class="isotope-overlay">
+                            <a href="#"><h4>Jayanth</h4></a> 
+                        <h5>student at gmrit,nextwave</h5>
+                        <p>Mr.Jyanth reddy full stack, He has been responsible for helping build web site</p>
+                        <div class="details005">
+                        <a href="#"> <button class="teacher002details" type="button">See More</button></a>
+                        
+                        </div></div>
+                </div>
+                <div class="element-item post-transition metal " data-category="alkaline-earth"> <img src="image/avatar-3814081_1280.png">
+                    <h4>vasavi</h4>
+                    <div class="isotope-overlay">
+     <a href="#"><h4>Vasavi</h4></a> 
+                        <h5>student at gmrit</h5>
+                        <p>She has been responsible for helping testing unit in application development</p>
+                      <div class="details005">
+                          <a href="#"> <button class="teacher002details" type="button">See More</button></a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+             
+              
+            </div>
+             <div class="details003">
+                 <a href="#"><button class="teacher002details-button" type="button">See More</button></a>
+                        
+                        </div>
+        </div>
+    </section>
+    
+   
+    <section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+        <div class="f-001">
+            <h3>Why Choose</h3>
+            <a href="#"><p>Why prediction</p></a>
+            <a href="#"><p>Regular Testing and Feedback</p></a>
+            <a href="#"><p>Special Workshops</p></a>
+            
+            </div>
+            </div>
+               <div class="col-md-3">
+        <div class="f-002">
+            <h3>subsciption Offered</h3>
+            <a href="#"><p>ml doles</p></a>
+            <a href="#"><p>dl models</p></a>
+            <a href="#"><p>Class 1</p></a>
+            <a href="#"><p>Class 2</p></a>
+            <a href="#"><p>Class 3</p></a>
+           
+
+
+
+          
+            
+            </div>
+            </div>
+                 <div class="col-md-3">
+        <div class="f-003">
+            <h3>Contact</h3>
+            <a href="#"><p>+008756364749</p></a>
+            <a href="#"><p>helpline@online.com</p></a>
+             <a href="#"><p>Facebook</p></a>
+            <a href="#"><p>Youtube</p></a>
+          </div>
+            </div>
+                    <div class="col-md-3">
+        <div class="f-004">
+            <h3>Students Zone</h3>
+            <a href="#"><p>FAQ</p></a>
+            <a href="#"><p>News & Articles</p></a>
+<a href="#"><p>Download Sample Paper</p></a>
+            
+           
+
+
+
+          
+            
+            </div>
+            </div>
+        </div>
+        
+        </div>
+    
+    
+    </section>
+    <section id="bootom-footer">
+    <h4>@CopyRight By sjvk 2024</h4>
+    
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/isotape.function.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $(document).ready(function(){
+        
+        
+    })
+    
+    
+    </script>
+</body>
+
+</html>
