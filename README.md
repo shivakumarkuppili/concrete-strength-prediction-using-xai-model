@@ -9,3 +9,7 @@ This project demonstrates the potential of leveraging advanced deep learning mod
 Dataset: https://www.kaggle.com/datasets/elikplim/concrete-compressive-strength-data-set
 
 
+
+
+output : https://github.com/user-attachments/assets/63dde090-3e4d-4d4f-aa10-b25d55d8ebcd
+
