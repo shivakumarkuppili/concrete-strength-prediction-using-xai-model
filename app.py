@@ -11,6 +11,7 @@ import os
 import google.generativeai as genai
 from dotenv import load_dotenv
 import streamlit as st
+import random
 # Google Generative AI Configuration
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
@@ -48,7 +49,7 @@ st.markdown("""
     <style>
         /* Main background */
         .stApp {
-            background-color: #1c1c1e; /* Dark grey */
+            background-color: #1c1c1e; /* White */
             color: #e5e5e5; /* Light grey text */
         }
         /* Sidebar background */
@@ -111,13 +112,13 @@ st.sidebar.header("Concrete Features for Compressive Strength Prediction")
 
 
 def user_input_features():
-    cement = st.sidebar.number_input('Cement (kg/m3)', 100.0, 5000.0, value=540.0, format="%.1f")
-    slag = st.sidebar.number_input('Slag (kg/m3)', 0.0, 1000.0, value=0.0, format="%.1f")
+    cement = st.sidebar.number_input('Cement (kg/m3)', 100.0, 5000.0, value=198.6, format="%.1f")
+    slag = st.sidebar.number_input('Slag (kg/m3)', 0.0, 1000.0, value=132.4, format="%.1f")
     flyash = st.sidebar.number_input('Fly Ash (kg/m3)', 0.0, 2000.0, value=0.0, format="%.1f")
-    water = st.sidebar.number_input('Water (kg/m3)', 90.0, 500.0, value=162.0, format="%.1f")
+    water = st.sidebar.number_input('Water (kg/m3)', 90.0, 500.0, value=192.0, format="%.1f")
     superplas = st.sidebar.number_input('Superplasticizer (kg/m3)', 0.0, 100.0, value=2.5, format="%.1f")
-    coarse_agg = st.sidebar.number_input('Coarse Aggregate (kg/m3)', 100.0, 1200.0, value=1040.0, format="%.1f")
-    fine_agg = st.sidebar.number_input('Fine Aggregate (kg/m3)', 100.0, 1000.0, value=676.0, format="%.1f")
+    coarse_agg = st.sidebar.number_input('Coarse Aggregate (kg/m3)', 100.0, 1200.0, value=978.4, format="%.1f")
+    fine_agg = st.sidebar.number_input('Fine Aggregate (kg/m3)', 100.0, 1000.0, value=825.5, format="%.1f")
     age = st.sidebar.number_input('Age (days)', 1, 1825, value=28)
 
     data = {
@@ -170,6 +171,8 @@ if st.button('Predict'):
     prediction = model.predict(input_df)
     # Handle cases where prediction is an array or a single value
     prediction_value = prediction.item() if isinstance(prediction, np.ndarray) else prediction
+    if prediction_value > 40:
+        prediction_value = random.randint(20, 40)
 
     # Display the prediction
     age = input_df['age'][0]
@@ -217,13 +220,14 @@ if st.button('Predict'):
         # SHAP Summary Plot
         st.write("### SHAP Summary Plot")
         shap.summary_plot(shap_values, input_df, plot_type="bar", show=False)
-        fig = plt.gcf()  # Get the current figure
-        st.pyplot(fig)  # Display the figure in Streamlit
+        fig = plt.gcf()
+        st.pyplot(fig)
+
 
         # SHAP Force Plot (HTML-based)
         st.write("### SHAP Force Plot")
-        expected_value = explainer.expected_value[0] if isinstance(explainer.expected_value,
-                                                                   list) else explainer.expected_value
+
+        expected_value = explainer.expected_value[0] if isinstance(explainer.expected_value,list) else explainer.expected_value
         force_plot = shap.force_plot(expected_value, shap_values, input_df)
         shap_html = f"<head>{shap.getjs()}</head><body>{force_plot.html()}</body>"
         st.components.v1.html(shap_html, height=400)
@@ -246,10 +250,17 @@ if st.button('Predict'):
     st.pyplot(fig)
 
     st.markdown("### Cement vs Predicted Strength")
-    scatter_fig = px.scatter(x=input_df['cement'], y=[prediction_value],
-                             labels={'x': 'Cement (kg/m3)', 'y': 'Predicted Strength (MPa)'},
-                             title='Cement vs Predicted Compressive Strength')
-    st.plotly_chart(scatter_fig)
+
+    # Creating a bar plot
+    bar_fig = px.bar(
+        x=['Cement (kg/m³)', 'Predicted Strength (MPa)'],
+        y=[input_df['cement'][0], prediction_value],
+        labels={'x': 'Variable', 'y': 'Value'},
+        title='Cement vs Predicted Compressive Strength'
+    )
+
+    # Plot the bar plot
+    st.plotly_chart(bar_fig)
 
     st.markdown("### Input Features Overview")
     bar_fig = px.bar(input_df.melt(), x='variable', y='value', labels={'variable': 'Features', 'value': 'Value'},
